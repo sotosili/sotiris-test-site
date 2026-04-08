@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: 'Brand Identity',
+    description: 'Logo, colour, typography, and the visual language that makes you recognisable and consistent across every touchpoint.',
+  },
+  {
+    title: 'Web Design',
+    description: 'Clean, responsive interfaces built with intention — from landing pages to full product UIs.',
+  },
+  {
+    title: 'Development',
+    description: 'Fast, accessible, well-structured code. We build with modern tools and hand off clean repositories.',
+  },
+  {
+    title: 'Strategy',
+    description: 'Positioning, user research, and roadmapping to make sure the work is pointed in the right direction before a single pixel is placed.',
+  },
+];
+---
+
+<Layout title="Services — Studio">
+  <p class="text-sm text-gray-400 uppercase tracking-widest mb-4">Services</p>
+  <h1 class="text-4xl font-semibold mb-6 max-w-xl">What we do.</h1>
+  <p class="text-gray-500 text-lg max-w-md mb-12">
+    A focused set of services designed to take your project from concept to launch.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-100 pt-12">
+    {services.map(({ title, description }) => (
+      <div class="py-2">
+        <h2 class="text-lg font-medium mb-2">{title}</h2>
+        <p class="text-gray-500 leading-relaxed">{description}</p>
+      </div>
+    ))}
+  </div>
+</Layout>

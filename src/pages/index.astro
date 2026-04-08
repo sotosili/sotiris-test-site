@@ -1,11 +1,31 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Sotiris Iliadis — AI Ethical Designer">
+  <section class="py-12">
+    <p class="text-sm text-gray-400 uppercase tracking-widest mb-4">AI Ethical Designer</p>
+    <h1 class="text-5xl font-semibold leading-tight mb-6 max-w-xl">
+      Sotiris Iliadis
+    </h1>
+    <p class="text-gray-500 text-lg max-w-md mb-8">
+      EU AI Act compliance · WCAG 2.1 AA · 13 years experience
+    </p>
+    <a href="/services" class="inline-block bg-gray-900 text-white text-sm px-6 py-3 rounded-md hover:bg-gray-700 transition-colors">
+      See our work
+    </a>
+  </section>
+
+  <section class="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-gray-100 pt-12">
+    {[
+      { label: 'Years experience', value: '13+' },
+      { label: 'Projects', value: '40+' },
+      { label: 'Based in', value: 'EU' },
+    ].map(({ label, value }) => (
+      <div>
+        <p class="text-3xl font-semibold">{value}</p>
+        <p class="text-sm text-gray-400 mt-1">{label}</p>
+      </div>
+    ))}
+  </section>
 </Layout>
